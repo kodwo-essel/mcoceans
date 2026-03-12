@@ -58,7 +58,7 @@ const Navbar = () => {
                                 className="object-cover"
                             />
                         </div>
-                        <span className={`text-xl md:text-2xl font-black tracking-tighter transition-colors duration-500 text-white`}>
+                        <span className={`text-sm md:text-2xl font-black tracking-tighter transition-colors duration-500 text-white`}>
                             MC DANIEL <span className="text-gold-leaf">OCEANS.</span>
                         </span>
                     </Link>

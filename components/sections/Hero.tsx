@@ -49,7 +49,7 @@ const Hero = () => {
                         </span>
                     </motion.div>
 
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-black text-white leading-tight mb-12 flex flex-wrap">
+                    <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-black text-white leading-tight mb-12 flex flex-wrap">
                         {"Orchestrating ".split("").map((char, i) => (
                             <motion.span
                                 key={i}
@@ -65,6 +65,7 @@ const Hero = () => {
                                 {char}
                             </motion.span>
                         ))}
+                        <div className="basis-full h-0 sm:hidden" />
                         {"Excellence.".split("").map((char, i) => (
                             <motion.span
                                 key={i + 14}
