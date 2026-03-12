@@ -10,6 +10,7 @@ import { Menu, X } from "lucide-react";
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [exploreOpen, setExploreOpen] = useState(false);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -32,12 +33,15 @@ const Navbar = () => {
     }, [mobileMenuOpen]);
 
     const navLinks = [
+        { name: "Home", href: "/" },
         { name: "Services", href: "/services" },
         { name: "About", href: "/about" },
         { name: "Portfolio", href: "/portfolio" },
         { name: "Testimonials", href: "/testimonials" },
         { name: "Booking", href: "/booking" },
     ];
+
+    const menuLinks = navLinks.filter(link => link.name !== "Booking");
 
     return (
         <>
@@ -65,23 +69,54 @@ const Navbar = () => {
 
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center gap-12">
-                        {navLinks
-                            .filter((link) => link.name !== "Booking")
-                            .map((link) => {
-                                const isActive = pathname === link.href;
-                                return (
-                                    <Link
-                                        key={link.name}
-                                        href={link.href}
-                                        className={`font-sans font-bold text-[10px] tracking-[0.3em] uppercase transition-all duration-300 relative group ${isActive ? "text-gold" : "text-white/60 hover:text-gold"
-                                            }`}
+                        {/* Grouped Menu */}
+                        <div
+                            className="relative"
+                            onMouseEnter={() => setExploreOpen(true)}
+                            onMouseLeave={() => setExploreOpen(false)}
+                        >
+                            <button
+                                className={`flex items-center gap-3 font-sans font-bold text-[10px] tracking-[0.4em] uppercase transition-all duration-300 ${exploreOpen ? "text-gold" : "text-white/60 hover:text-gold"}`}
+                            >
+                                Explore
+                                <motion.span
+                                    animate={{ rotate: exploreOpen ? 180 : 0 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="text-[8px]"
+                                >
+                                    ▼
+                                </motion.span>
+                            </button>
+
+                            <AnimatePresence>
+                                {exploreOpen && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                        transition={{ duration: 0.2, ease: "easeOut" }}
+                                        className="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-48"
                                     >
-                                        {link.name}
-                                        <span className={`absolute -bottom-2 left-0 h-[1px] bg-gold transition-all duration-500 ${isActive ? "w-full" : "w-0 group-hover:w-full"
-                                            }`} />
-                                    </Link>
-                                );
-                            })}
+                                        <div className="bg-black border border-white/10 p-6 space-y-4 shadow-2xl">
+                                            {menuLinks.map((link) => {
+                                                const isActive = pathname === link.href;
+                                                return (
+                                                    <Link
+                                                        key={link.name}
+                                                        href={link.href}
+                                                        className={`block font-sans font-bold text-[10px] tracking-[0.3em] uppercase transition-all duration-300 ${isActive ? "text-gold" : "text-white/40 hover:text-white"
+                                                            }`}
+                                                    >
+                                                        {link.name}
+                                                    </Link>
+                                                );
+                                            })}
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
+
                         <Link
                             href="/booking"
                             className="px-10 py-4 bg-gold/10 border border-gold/30 text-gold font-sans font-bold text-[9px] tracking-[0.4em] uppercase hover:bg-gold hover:text-black transition-all duration-500"

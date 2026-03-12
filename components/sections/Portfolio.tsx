@@ -40,7 +40,7 @@ const Portfolio = () => {
                         className="lg:mb-4 lg:text-right"
                     >
                         <p className="text-white/40 text-base sm:text-lg font-light max-w-sm leading-relaxed tracking-wide">
-                            A curated selection of legacy events orchestrated across twelve nations.
+                            A curated selection of legacy events orchestrated across twelve major cities.
                         </p>
                     </motion.div>
                 </div>
@@ -63,7 +63,7 @@ const Portfolio = () => {
 
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
                         <Link href="/portfolio">
-                            <button className="px-24 py-8 bg-gold/90 backdrop-blur-md text-black font-sans font-bold text-xs tracking-[0.5em] uppercase transition-all duration-500 hover:bg-gold">
+                            <button className="px-24 py-8 bg-gold/90 backdrop-blur-md text-black font-sans font-bold text-xs tracking-[0.5em] uppercase cursor-pointer transition-all duration-500 hover:bg-gold">
                                 View All Works
                             </button>
                         </Link>
@@ -73,10 +73,10 @@ const Portfolio = () => {
                 {/* Elite Metrics */}
                 <div className="mt-32 grid grid-cols-2 lg:grid-cols-4 gap-24 border-t border-white/5 pt-32 text-center lg:text-left">
                     {[
-                        { label: "Elite Marriages", val: "300+" },
-                        { label: "Global Nations", val: "12" },
-                        { label: "Fortune 500 Galas", val: "150+" },
-                        { label: "Press Features", val: "40+" }
+                        { label: "Elite Marriages", val: "60+" },
+                        { label: "Major Cities", val: "5+" },
+                        { label: "Corporate Galas", val: "30+" },
+                        { label: "Mastery", val: "5+ Yrs" }
                     ].map((stat, i) => (
                         <div key={i}>
                             <span className="text-white/20 font-sans font-bold text-[9px] mb-4 block tracking-[0.3em] uppercase">{stat.label}</span>

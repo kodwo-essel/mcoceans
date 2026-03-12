@@ -84,12 +84,12 @@ const About = () => {
 
                             <div className="grid grid-cols-2 gap-12 pt-12 border-t border-white/5">
                                 <div>
-                                    <span className="text-gold font-black text-4xl sm:text-5xl block mb-2 tracking-tighter">500+</span>
-                                    <span className="text-white/40 font-sans font-bold uppercase text-[9px] tracking-widest">Global Events</span>
+                                    <span className="text-gold font-black text-4xl sm:text-5xl block mb-2 tracking-tighter">100+</span>
+                                    <span className="text-white/40 font-sans font-bold uppercase text-[9px] tracking-widest">Events Delivered</span>
                                 </div>
                                 <div>
-                                    <span className="text-gold font-black text-4xl sm:text-5xl block mb-2 tracking-tighter">12YRS</span>
-                                    <span className="text-white/40 font-sans font-bold uppercase text-[9px] tracking-widest">Mastery</span>
+                                    <span className="text-gold font-black text-4xl sm:text-5xl block mb-2 tracking-tighter">5+</span>
+                                    <span className="text-white/40 font-sans font-bold uppercase text-[9px] tracking-widest">Years of Mastery</span>
                                 </div>
                             </div>
                         </motion.div>

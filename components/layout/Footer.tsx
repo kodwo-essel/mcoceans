@@ -2,7 +2,20 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Twitter, Facebook, MessageCircle } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
+// Custom Brand Icons
+const TikTokIcon = ({ size = 20 }: { size?: number }) => (
+    <svg width={size} height={size} viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M5.671 6.655a1.99 1.99 0 1 0 1.99 1.99v-5.28c.308 1.321 1.195 2.242 2.658 2.242" />
+        <path d="M.96 10.269a3.13 3.13 0 0 0 2.753 2.76c1.07.119 2.167.221 3.287.221s2.218-.102 3.287-.222a3.13 3.13 0 0 0 2.753-2.76c.114-1.063.21-2.155.21-3.268s-.096-2.205-.21-3.269a3.13 3.13 0 0 0-2.753-2.76C9.217.853 8.12.75 7 .75S4.782.852 3.713.972A3.13 3.13 0 0 0 .96 3.732C.846 4.794.75 5.886.75 7s.096 2.205.21 3.269" />
+    </svg>
+);
+
+const WhatsAppIcon = ({ size = 20 }: { size?: number }) => (
+    <svg width={size} height={size} viewBox="0 0 32 32" fill="currentColor">
+        <path fillRule="evenodd" d="M24.504 7.504A11.88 11.88 0 0 0 16.05 4C9.465 4 4.1 9.36 4.1 15.945a11.9 11.9 0 0 0 1.594 5.973L4 28.109l6.336-1.664a11.96 11.96 0 0 0 5.71 1.457h.005c6.586 0 11.945-5.359 11.949-11.949c0-3.191-1.242-6.191-3.496-8.45zM16.05 25.883h-.004a9.93 9.93 0 0 1-5.055-1.383l-.363-.215l-3.762.985l1.004-3.665l-.234-.375a9.9 9.9 0 0 1-1.52-5.285c0-5.472 4.457-9.925 9.938-9.925a9.86 9.86 0 0 1 7.02 2.91a9.88 9.88 0 0 1 2.905 7.023c0 5.477-4.457 9.93-9.93 9.93zm5.445-7.438c-.297-.148-1.766-.87-2.039-.968c-.273-.102-.473-.149-.672.148c-.2.3-.77.973-.945 1.172c-.172.195-.348.223-.645.074c-.3-.148-1.261-.465-2.402-1.484c-.887-.79-1.488-1.77-1.66-2.067c-.176-.3-.02-.46.129-.61c.136-.132.3-.347.449-.523c.148-.171.2-.296.3-.496c.098-.199.048-.375-.027-.523c-.074-.148-.671-1.621-.921-2.219c-.243-.582-.489-.5-.672-.511c-.172-.008-.371-.008-.57-.008c-.2 0-.524.074-.798.375c-.273.297-1.043 1.02-1.043 2.488c0 1.469 1.07 2.89 1.22 3.09c.148.195 2.105 3.21 5.1 4.504a17 17 0 0 0 1.7.629c.715.226 1.367.195 1.883.12c.574-.085 1.765-.722 2.015-1.421c.247-.695.247-1.293.172-1.418c-.074-.125-.273-.2-.574-.352" />
+    </svg>
+);
 
 export default function Footer() {
     return (
@@ -51,9 +64,14 @@ export default function Footer() {
                     <div className="lg:col-span-4 space-y-8">
                         <h4 className="text-gold font-sans font-bold text-[10px] tracking-[0.4em] uppercase">Connect</h4>
                         <div className="flex gap-6">
-                            {[Instagram, Facebook, Twitter, MessageCircle].map((Icon, i) => (
-                                <Link key={i} href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-gold hover:text-gold transition-all duration-300">
-                                    <Icon size={20} />
+                            {[
+                                { Icon: Instagram, href: "https://www.instagram.com/theoceanmc?utm_source=qr&igsh=MXNqcGw0aXFhYW9zZA==" },
+                                { Icon: TikTokIcon, href: "https://www.tiktok.com/@theoceanmc?_r=1&_t=ZS-94dGkHEpPXA" },
+                                { Icon: Facebook, href: "https://www.facebook.com/share/1BEtaM2Smy/" },
+                                { Icon: WhatsAppIcon, href: "https://wa.me/message/DMJTQ45QFRG6D1" }
+                            ].map((social, i) => (
+                                <Link key={i} href={social.href} target="_blank" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-gold hover:text-gold transition-all duration-300">
+                                    <social.Icon size={20} />
                                 </Link>
                             ))}
                         </div>

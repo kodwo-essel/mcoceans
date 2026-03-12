@@ -76,7 +76,7 @@ const Booking = () => {
                                 {[
                                     { icon: Mail, text: "theoceanmc1@gmail.com" },
                                     { icon: Phone, text: "+233 53 940 5460 | +233 54 762 6334" },
-                                    { icon: MapPin, text: "Accra, Ghana | Global Availability" }
+                                    { icon: MapPin, text: "Accra, Ghana | Nationwide Coverage" }
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-6 group">
                                         <div className="w-12 h-12 rounded-full border border-gold/20 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black transition-all duration-500">

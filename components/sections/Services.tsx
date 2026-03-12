@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Heart, Trophy, Mic2 } from "lucide-react";
+import { Briefcase, Heart, Trophy, Mic2, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const services = [
     {
@@ -114,6 +115,38 @@ const Services = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Engagement CTA - NEW PREMIUM DESIGN */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.2 }}
+                    className="mt-48 pt-32 border-t border-white/5"
+                >
+                    <div className="relative group overflow-hidden bg-emerald/5 border border-white/5 p-12 md:p-24 text-center max-w-5xl mx-auto">
+                        {/* Shimmer Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[2000ms]" />
+
+                        <div className="relative z-10">
+                            <span className="text-gold font-sans font-bold tracking-[0.5em] uppercase text-[10px] mb-8 block">Next Steps</span>
+                            <h3 className="text-3xl md:text-5xl font-black text-white mb-10 tracking-tighter leading-tight">
+                                Ready to orchestrate <br />
+                                your next <span className="text-gold-leaf">masterpiece?</span>
+                            </h3>
+                            <p className="text-white/40 text-base font-light mb-16 max-w-xl mx-auto leading-relaxed">
+                                For specialized ceremonial requests or elite event hosting, we offer bespoke consultations to ensure every second is perfect.
+                            </p>
+
+                            <Link href="/booking" className="inline-block">
+                                <button className="group relative px-14 py-6 bg-gold text-black font-sans font-bold text-[10px] tracking-[0.5em] uppercase overflow-hidden transition-all duration-500 cursor-pointer flex items-center gap-4">
+                                    <span className="relative z-10">Get a quote</span>
+                                    <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform duration-500" />
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );
