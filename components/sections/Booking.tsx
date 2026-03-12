@@ -9,6 +9,8 @@ const Booking = () => {
     const formRef = useRef<HTMLFormElement>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+    const [eventType, setEventType] = useState("");
+    const [eventDate, setEventDate] = useState("");
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -26,6 +28,8 @@ const Booking = () => {
             );
             setSubmitStatus("success");
             formRef.current.reset();
+            setEventType("");
+            setEventDate("");
         } catch (error) {
             console.error("EmailJS Error:", error);
             setSubmitStatus("error");
@@ -138,7 +142,9 @@ const Booking = () => {
                                             name="event_date"
                                             required
                                             type="date"
-                                            className="w-full bg-transparent border-b border-white/10 py-4 text-white/20 font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors appearance-none"
+                                            value={eventDate}
+                                            onChange={(e) => setEventDate(e.target.value)}
+                                            className={`w-full bg-transparent border-b border-white/10 py-4 font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors appearance-none ${eventDate ? 'text-white' : 'text-white/20'}`}
                                         />
                                     </div>
                                 </div>
@@ -147,8 +153,12 @@ const Booking = () => {
                                     <label className="text-gold font-sans font-bold text-[10px] tracking-[0.3em] uppercase">Event Type</label>
                                     <select
                                         name="event_type"
-                                        className="w-full bg-transparent border-b border-white/10 py-4 text-white/40 font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors appearance-none cursor-pointer"
+                                        required
+                                        value={eventType}
+                                        onChange={(e) => setEventType(e.target.value)}
+                                        className={`w-full bg-transparent border-b border-white/10 py-4 font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors appearance-none cursor-pointer ${eventType ? 'text-white' : 'text-white/20'}`}
                                     >
+                                        <option value="" disabled className="bg-black text-white/40">Select Event Type</option>
                                         <option value="Okyeame Services" className="bg-emerald text-white">Okyeame Services</option>
                                         <option value="Wedding Reception" className="bg-emerald text-white">Wedding Reception</option>
                                         <option value="Dinner and Awards" className="bg-emerald text-white">Dinner and Awards</option>
