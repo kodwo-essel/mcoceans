@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const galleryImages = [
-    { src: "/images/mrandmrsofori.jpg", title: "Wedding Reception", location: "Accra", category: "Elite" },
-    { src: "/images/mrandmrsamofa.jpg", title: "Dinner and Awards", location: "Kumasi", category: "Corporate" },
-    { src: "/images/kobinaandesi.jpg", title: "Okyeame Services", location: "Takoradi", category: "Traditional" },
-    { src: "/images/stephenandgabriella.jpg", title: "Social Events", location: "Koforidua", category: "Elite" },
-    { src: "/images/joshuaandeunice.jpg", title: "Corporate Events", location: "Sunyani", category: "Corporate" },
-    { src: "/images/prosperandnanayaa.jpg", title: "Product Launch", location: "Ho", category: "Product" },
-    { src: "/images/1.jpg", title: "Okyeame Services", location: "Cape Coast", category: "Traditional" },
-    { src: "/images/2.jpg", title: "Wedding Reception", location: "Aburi", category: "Elite" },
-    { src: "/images/3.jpg", title: "Dinner and Awards", location: "Accra", category: "Corporate" },
-    { src: "/images/4.jpg", title: "Corporate Events", location: "Tema", category: "Corporate" },
-    { src: "/images/5.jpg", title: "Social Events", location: "Kumasi", category: "Elite" },
-    { src: "/images/6.jpg", title: "Product Launch", location: "Accra", category: "Product" },
-    { src: "/images/7.jpg", title: "Wedding Reception", location: "Koforidua", category: "Elite" },
-    { src: "/images/8.jpg", title: "Dinner and Awards", location: "Takoradi", category: "Corporate" },
     { src: "/images/9.jpg", title: "Okyeame Services", location: "Ho", category: "Traditional" },
+    { src: "/images/mrandmrsofori.jpg", title: "Wedding Reception", location: "Accra", category: "Elite" },
+    { src: "/images/3.jpg", title: "Dinner and Awards", location: "Accra", category: "Corporate" },
+    { src: "/images/prosperandnanayaa.jpg", title: "Wedding Reception", location: "Ho", category: "Elite" },
+    { src: "/images/1.jpg", title: "Okyeame Services", location: "Cape Coast", category: "Traditional" },
+    { src: "/images/6.jpg", title: "Wedding Reception", location: "Accra", category: "Elite" },
+    { src: "/images/2.jpg", title: "Social Events", location: "Aburi", category: "Social" },
+    { src: "/images/mrandmrsamofa.jpg", title: "Wedding Reception", location: "Kumasi", category: "Elite" },
+    { src: "/images/joshuaandeunice.jpg", title: "Wedding Reception", location: "Sunyani", category: "Elite" },
+    { src: "/images/5.jpg", title: "Social Events", location: "Kumasi", category: "Social" },
+    { src: "/images/kobinaandesi.jpg", title: "Wedding Reception", location: "Takoradi", category: "Elite" },
+    { src: "/images/8.jpg", title: "Wedding Reception", location: "Takoradi", category: "Elite" },
+    { src: "/images/7.jpg", title: "Wedding Reception", location: "Koforidua", category: "Elite" },
+    { src: "/images/4.jpg", title: "Social Events", location: "Tema", category: "Social" },
+    { src: "/images/stephenandgabriella.jpg", title: "Social Events", location: "Koforidua", category: "Social" },
 ];
 
 const Gallery = () => {
