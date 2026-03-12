@@ -59,7 +59,7 @@ const Navbar = () => {
                             />
                         </div>
                         <span className={`text-sm md:text-2xl font-black tracking-tighter transition-colors duration-500 text-white`}>
-                            MC DANIEL <span className="text-gold-leaf">OCEAN.</span>
+                            MC DANIEL <span className="text-gold-leaf">OCEAN</span>
                         </span>
                     </Link>
 

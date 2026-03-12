@@ -222,29 +222,6 @@ const Booking = () => {
 
                 </div>
 
-                {/* 3. Rates - NEW */}
-                <div className="mt-32 pt-32 border-t border-white/5">
-                    <div className="max-w-3xl mx-auto">
-                        <h4 className="text-gold font-sans font-bold text-[10px] tracking-[0.4em] uppercase mb-12 text-center">Event Rates (GHS)</h4>
-                        <div className="space-y-6">
-                            {[
-                                { type: "Okyeame Services", rate: "2,000" },
-                                { type: "Wedding Reception", rate: "3,000" },
-                                { type: "Traditional & Wedding", rate: "5,000" },
-                                { type: "Birthday Party", rate: "2,000" },
-                                { type: "Multi-Event Deal", rate: "Custom" }
-                            ].map((row, i) => (
-                                <div key={i} className="flex justify-between items-center border-b border-white/5 pb-4">
-                                    <span className="text-white/60 font-sans font-bold text-[10px] tracking-widest uppercase">{row.type}</span>
-                                    <span className="text-gold font-display text-xl">{row.rate}</span>
-                                </div>
-                            ))}
-                        </div>
-                        <p className="mt-8 text-white/20 font-sans font-bold text-[8px] tracking-[0.2em] uppercase italic text-center">
-                            *Additional costs may apply for accommodation and transportation to distant locations.
-                        </p>
-                    </div>
-                </div>
 
             </div>
         </section>

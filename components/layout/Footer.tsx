@@ -24,7 +24,7 @@ export default function Footer() {
                                 />
                             </div>
                             <span className="text-4xl md:text-6xl font-black tracking-tighter text-white">
-                                MC DANIEL <span className="text-gold-leaf">OCEAN.</span>
+                                MC DANIEL <span className="text-gold-leaf">OCEAN</span>
                             </span>
                         </Link>
                         <p className="text-white/40 text-lg font-light max-w-2xl leading-relaxed tracking-tight">
@@ -70,7 +70,7 @@ export default function Footer() {
 
                 <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
                     <p className="text-white/20 text-[9px] font-sans font-bold tracking-widest uppercase">
-                        © {new Date().getFullYear()} MC DANIEL OCEAN. ALL RIGHTS SECURED.
+                        © {new Date().getFullYear()} MC DANIEL OCEAN ALL RIGHTS SECURED.
                     </p>
 
                     <a

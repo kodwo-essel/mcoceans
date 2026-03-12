@@ -69,7 +69,7 @@ const Hero = () => {
                             </motion.span>
                         ))}
                         <div className="basis-full h-0 sm:hidden" />
-                        {"Excellence.".split("").map((char, i) => (
+                        {"Excellence".split("").map((char, i) => (
                             <motion.span
                                 key={i + 14}
                                 initial={{ opacity: 0 }}
