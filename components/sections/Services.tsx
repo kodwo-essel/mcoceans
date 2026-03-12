@@ -5,28 +5,46 @@ import { Briefcase, Heart, Trophy, Mic2 } from "lucide-react";
 
 const services = [
     {
-        title: "Corporate Galas",
-        description: "Sophisticated orchestration for high-stakes award ceremonies and international product launches.",
-        icon: Briefcase,
+        title: "Okyeame Services",
+        description: "Traditional ceremonies and cultural events delivered with cultural depth and rhythmic energy.",
+        icon: Mic2,
         id: "I"
     },
     {
-        title: "Elite Weddings",
-        description: "The fine art of celebration for discerning couples seeking a timeless, cinematic experience.",
+        title: "Wedding Reception",
+        description: "Full hosting, coordination, and entertainment for the most important day of your life.",
         icon: Heart,
         id: "II"
     },
     {
-        title: "Sporting Events",
-        description: "Commanding presence and crowd synergy for world-class competitions and stadiums.",
-        icon: Trophy,
+        title: "Dinner and Awards",
+        description: "Formal hosting, presentations, and entertainment for prestigious corporate galas.",
+        icon: Briefcase,
         id: "III"
     },
     {
-        title: "Private Soirées",
-        description: "Exclusive hosting for private parties, embassy functions, and luxury social gatherings.",
-        icon: Mic2,
+        title: "Product Launch",
+        description: "Engaging your audience and managing the flow to deliver your key brand message.",
+        icon: Trophy,
         id: "IV"
+    },
+    {
+        title: "Corporate Events",
+        description: "Professional hosting for AGMs and corporate gatherings with precise agenda management.",
+        icon: Briefcase,
+        id: "V"
+    },
+    {
+        title: "Social Events",
+        description: "From birthday parties to private soirée, we bring life and order to every celebration.",
+        icon: Mic2,
+        id: "VI"
+    },
+    {
+        title: "Custom Package",
+        description: "Tailored services to meet your specific needs and create a unique event experience.",
+        icon: Briefcase,
+        id: "VII"
     },
 ];
 

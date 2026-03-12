@@ -54,7 +54,7 @@ const Portfolio = () => {
                     className="relative aspect-[16/9] w-full border border-gold/10 overflow-hidden group"
                 >
                     <Image
-                        src="/portfolio_collage.png"
+                        src="/images/3.jpg"
                         alt="Event Portfolio Collage"
                         fill
                         className="object-cover scale-110 group-hover:scale-100 transition-transform duration-[8000ms] ease-out opacity-40 group-hover:opacity-100"

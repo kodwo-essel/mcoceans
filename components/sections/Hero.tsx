@@ -14,16 +14,24 @@ const Hero = () => {
                 initial={{ scale: 1.1, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 3, ease: "easeOut" }}
-                className="absolute inset-0 z-0"
+                className="absolute inset-0 z-0 bg-emerald-deep"
             >
                 <Image
-                    src="/mcdaniel_oceans_hero.png"
+                    src="/images/hero.jpg"
                     alt="MC Daniel Oceans"
                     fill
                     priority
-                    className="object-cover object-center opacity-55"
+                    className="object-cover object-center opacity-30 grayscale mix-blend-luminosity"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/80 opacity-90" />
+
+                {/* Oceanic Green Accents */}
+                <div className="absolute inset-0 bg-emerald/10 mix-blend-color" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-forest/40 to-black/60 opacity-90" />
+
+                {/* Luxury Bloom Accent */}
+                <div className="bloom w-[1000px] h-[1000px] bg-emerald/20 -top-1/2 -left-1/4 opacity-40" />
+                <div className="bloom w-[800px] h-[800px] bg-emerald/10 bottom-0 right-0 translate-x-1/2 translate-y-1/2 opacity-30" />
+
                 <div className="absolute inset-0 hero-vignette opacity-100" />
             </motion.div>
 

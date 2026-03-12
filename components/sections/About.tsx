@@ -41,14 +41,14 @@ const About = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 1.5 }}
-                            className="relative z-10 aspect-[3/4] border border-gold/20 p-4"
+                            className="relative z-10 aspect-[3/4] border border-gold/20 p-4 group"
                         >
                             <div className="relative w-full h-full overflow-hidden">
                                 <Image
-                                    src="/mcdaniel_oceans_hero.png"
+                                    src="/images/6.jpg"
                                     alt="MC Daniel Oceans"
                                     fill
-                                    className="object-cover grayscale hover:grayscale-0 transition-all duration-[2000ms] scale-110 hover:scale-100"
+                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-[2000ms] scale-110 group-hover:scale-100"
                                 />
                             </div>
                             {/* Gold Frame Corner Detail */}
@@ -66,14 +66,21 @@ const About = () => {
                             className="space-y-12"
                         >
                             <h3 className="text-2xl sm:text-4xl font-black text-white leading-tight">
-                                Crafting atmospheres where <span className="text-gold">every moment</span> feels like a legacy in the making.
+                                Crafting atmospheres where <span className="text-gold">every moment</span> becomes an unforgettable masterpiece.
                             </h3>
 
                             <div className="w-12 h-[1px] bg-gold/50" />
 
                             <p className="text-white/60 text-base sm:text-lg font-light leading-relaxed tracking-wide">
-                                Daniel Oceans is the narrator of choice for the world&apos;s most prestigious gatherings. With a commanding presence and an intuitive grasp of orchestral flow, he transforms events into cinematic narratives.
+                                With over half a decade of experience and specialized training in event coordination and cultural traditions, Daniel Oceans brings a vibrant blend of energy, warmth, and seamless professionalism to every stage.
                             </p>
+
+                            <div className="space-y-6">
+                                <h4 className="text-gold font-sans font-bold text-[10px] tracking-[0.3em] uppercase">Why Your Event Deserves MC Daniel Ocean</h4>
+                                <p className="text-white/60 text-base font-light leading-relaxed tracking-wide italic">
+                                    "Choose me for a stress-free, perfectly coordinated event where my adaptive style and confident command ensure a truly unique and fun experience. I treat your event as my own, creating memories that linger long after the final applause."
+                                </p>
+                            </div>
 
                             <div className="grid grid-cols-2 gap-12 pt-12 border-t border-white/5">
                                 <div>

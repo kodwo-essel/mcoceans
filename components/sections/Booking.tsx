@@ -1,9 +1,39 @@
 "use client";
 
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const Booking = () => {
+    const formRef = useRef<HTMLFormElement>(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!formRef.current) return;
+
+        setIsSubmitting(true);
+        setSubmitStatus("idle");
+
+        try {
+            await emailjs.sendForm(
+                "service_91a2jua",
+                "template_y4veigr",
+                formRef.current,
+                "hID9iCKI202ChFZOY"
+            );
+            setSubmitStatus("success");
+            formRef.current.reset();
+        } catch (error) {
+            console.error("EmailJS Error:", error);
+            setSubmitStatus("error");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <section id="booking" className="py-32 md:py-64 bg-emerald relative overflow-hidden">
             {/* Soft Gold Bloom */}
@@ -40,8 +70,8 @@ const Booking = () => {
 
                             <div className="space-y-8 pt-12 border-t border-white/5">
                                 {[
-                                    { icon: Mail, text: "management@mcdanieloceans.com" },
-                                    { icon: Phone, text: "+233 (0) 50 123 4567" },
+                                    { icon: Mail, text: "theoceanmc1@gmail.com" },
+                                    { icon: Phone, text: "+233 53 940 5460 | +233 54 762 6334" },
                                     { icon: MapPin, text: "Accra, Ghana | Global Availability" }
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-6 group">
@@ -67,44 +97,126 @@ const Booking = () => {
                             {/* Corner Accent */}
                             <div className="absolute top-0 right-0 w-24 h-24 border-t border-r border-gold/20" />
 
-                            <form className="space-y-12">
+                            <form ref={formRef} onSubmit={handleSubmit} className="space-y-12">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                                     <div className="space-y-4">
                                         <label className="text-gold font-sans font-bold text-[10px] tracking-[0.3em] uppercase">Full Name</label>
-                                        <input type="text" className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors" placeholder="Alexander Sterling" />
+                                        <input
+                                            name="user_name"
+                                            required
+                                            type="text"
+                                            className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors"
+                                            placeholder="Alexander Sterling"
+                                        />
                                     </div>
                                     <div className="space-y-4">
                                         <label className="text-gold font-sans font-bold text-[10px] tracking-[0.3em] uppercase">Email Address</label>
-                                        <input type="email" className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors" placeholder="sterling@example.com" />
+                                        <input
+                                            name="user_email"
+                                            required
+                                            type="email"
+                                            className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors"
+                                            placeholder="sterling@example.com"
+                                        />
                                     </div>
                                 </div>
 
                                 <div className="space-y-4">
                                     <label className="text-gold font-sans font-bold text-[10px] tracking-[0.3em] uppercase">Event Type</label>
-                                    <select className="w-full bg-transparent border-b border-white/10 py-4 text-white/40 font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors appearance-none cursor-pointer">
-                                        <option className="bg-emerald text-white">Elite Wedding</option>
-                                        <option className="bg-emerald text-white">Corporate Gala</option>
-                                        <option className="bg-emerald text-white">Sporting Event</option>
-                                        <option className="bg-emerald text-white">Private Soirée</option>
+                                    <select
+                                        name="event_type"
+                                        className="w-full bg-transparent border-b border-white/10 py-4 text-white/40 font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors appearance-none cursor-pointer"
+                                    >
+                                        <option value="Okyeame Services" className="bg-emerald text-white">Okyeame Services</option>
+                                        <option value="Wedding Reception" className="bg-emerald text-white">Wedding Reception</option>
+                                        <option value="Dinner and Awards" className="bg-emerald text-white">Dinner and Awards</option>
+                                        <option value="Product Launch" className="bg-emerald text-white">Product Launch</option>
+                                        <option value="Corporate Events" className="bg-emerald text-white">Corporate Events (AGMs, etc.)</option>
+                                        <option value="Social Events" className="bg-emerald text-white">Social Events (Birthdays, etc.)</option>
+                                        <option value="Custom Package" className="bg-emerald text-white">Custom Package</option>
                                     </select>
                                 </div>
 
                                 <div className="space-y-4">
                                     <label className="text-gold font-sans font-bold text-[10px] tracking-[0.3em] uppercase">Message</label>
-                                    <textarea rows={4} className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors resize-none" placeholder="Tell us about your masterpiece..."></textarea>
+                                    <textarea
+                                        name="message"
+                                        required
+                                        rows={4}
+                                        className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors resize-none"
+                                        placeholder="Tell us about your masterpiece..."
+                                    ></textarea>
                                 </div>
 
-                                <button className="w-full py-8 bg-gold text-black font-sans font-bold text-xs tracking-[0.6em] uppercase transition-all duration-500 hover:tracking-[0.8em] active:scale-95">
-                                    Request Consultation
+                                <button
+                                    disabled={isSubmitting}
+                                    type="submit"
+                                    className="w-full py-8 bg-gold text-black font-sans font-bold text-xs tracking-[0.6em] uppercase transition-all duration-500 hover:tracking-[0.8em] active:scale-95 flex items-center justify-center gap-4 disabled:opacity-70 disabled:cursor-not-allowed"
+                                >
+                                    {isSubmitting ? (
+                                        <>
+                                            <Loader2 size={16} className="animate-spin" />
+                                            <span>Processing...</span>
+                                        </>
+                                    ) : (
+                                        "Request Consultation"
+                                    )}
                                 </button>
+
+                                {/* Submission Feedback */}
+                                {submitStatus === "success" && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        className="flex items-center gap-4 text-white font-sans font-bold text-[10px] tracking-widest uppercase bg-white/5 p-6 border border-white/10"
+                                    >
+                                        <CheckCircle2 className="text-gold" size={18} />
+                                        <span>Inquiry sent successfully. We will reach out shortly.</span>
+                                    </motion.div>
+                                )}
+                                {submitStatus === "error" && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        className="flex items-center gap-4 text-red-400 font-sans font-bold text-[10px] tracking-widest uppercase bg-red-400/5 p-6 border border-red-400/20"
+                                    >
+                                        <AlertCircle size={18} />
+                                        <span>Failed to send inquiry. Please try again.</span>
+                                    </motion.div>
+                                )}
                             </form>
                         </motion.div>
                     </div>
 
                 </div>
+
+                {/* 3. Rates - NEW */}
+                <div className="mt-32 pt-32 border-t border-white/5">
+                    <div className="max-w-3xl mx-auto">
+                        <h4 className="text-gold font-sans font-bold text-[10px] tracking-[0.4em] uppercase mb-12 text-center">Event Rates (GHS)</h4>
+                        <div className="space-y-6">
+                            {[
+                                { type: "Okyeame Services", rate: "2,000" },
+                                { type: "Wedding Reception", rate: "3,000" },
+                                { type: "Traditional & Wedding", rate: "5,000" },
+                                { type: "Birthday Party", rate: "2,000" },
+                                { type: "Multi-Event Deal", rate: "Custom" }
+                            ].map((row, i) => (
+                                <div key={i} className="flex justify-between items-center border-b border-white/5 pb-4">
+                                    <span className="text-white/60 font-sans font-bold text-[10px] tracking-widest uppercase">{row.type}</span>
+                                    <span className="text-gold font-display text-xl">{row.rate}</span>
+                                </div>
+                            ))}
+                        </div>
+                        <p className="mt-8 text-white/20 font-sans font-bold text-[8px] tracking-[0.2em] uppercase italic text-center">
+                            *Additional costs may apply for accommodation and transportation to distant locations.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </section>
     );
 };
 
-export default Booking;
+export default Booking;  

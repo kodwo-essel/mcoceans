@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const galleryImages = [
-    { src: "/portfolio_collage.png", title: "Royal Wedding", location: "Accra", category: "Elite" },
-    { src: "/mcdaniel_oceans_hero.png", title: "Presidential Gala", location: "Kumasi", category: "Corporate" },
-    { src: "/portfolio_collage.png", title: "Sporting Excellence", location: "Takoradi", category: "Sports" },
-    { src: "/mcdaniel_oceans_hero.png", title: "Private Soirée", location: "Koforidua", category: "Elite" },
-    { src: "/portfolio_collage.png", title: "Ambassador's Ball", location: "Sunyani", category: "Corporate" },
-    { src: "/mcdaniel_oceans_hero.png", title: "Tech Summit", location: "Ho", category: "Corporate" },
+    { src: "/images/1.jpg", title: "Royal Wedding", location: "Accra", category: "Elite" },
+    { src: "/images/2.jpg", title: "Presidential Gala", location: "Kumasi", category: "Corporate" },
+    { src: "/images/3.jpg", title: "Sporting Excellence", location: "Takoradi", category: "Sports" },
+    { src: "/images/4.jpg", title: "Private Soirée", location: "Koforidua", category: "Elite" },
+    { src: "/images/5.jpg", title: "Ambassador's Ball", location: "Sunyani", category: "Corporate" },
+    { src: "/images/6.jpg", title: "Tech Summit", location: "Ho", category: "Corporate" },
 ];
 
 const Gallery = () => {
@@ -49,7 +49,7 @@ const Gallery = () => {
                                 src={image.src}
                                 alt={image.title}
                                 fill
-                                className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+                                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
 

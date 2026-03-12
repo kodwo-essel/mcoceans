@@ -26,9 +26,12 @@ export default function Footer() {
                     <div className="lg:col-span-4 space-y-8">
                         <h4 className="text-gold font-sans font-bold text-[10px] tracking-[0.4em] uppercase">Navigation</h4>
                         <ul className="space-y-4">
-                            {["Home", "Services", "About", "Portfolio", "Booking"].map((link) => (
+                            {["Home", "Services", "About", "Portfolio", "Testimonials", "Booking"].map((link) => (
                                 <li key={link}>
-                                    <Link href={`#${link.toLowerCase()}`} className="text-white/40 hover:text-gold font-sans font-bold tracking-[0.2em] uppercase text-[9px] transition-colors duration-300">
+                                    <Link
+                                        href={link === "Home" ? "/" : link === "Testimonials" ? "/testimonials" : `/#${link.toLowerCase()}`}
+                                        className="text-white/40 hover:text-gold font-sans font-bold tracking-[0.2em] uppercase text-[9px] transition-colors duration-300"
+                                    >
                                         {link}
                                     </Link>
                                 </li>
@@ -50,8 +53,8 @@ export default function Footer() {
                     <div className="lg:col-span-4 space-y-8">
                         <h4 className="text-gold font-sans font-bold text-[10px] tracking-[0.4em] uppercase">Inquiries</h4>
                         <p className="text-white/40 font-sans font-bold text-[8px] sm:text-[11px] tracking-[0.2em] uppercase leading-relaxed">
-                            management@mcdanieloceans.com <br />
-                            bookings@mcdanieloceans.com
+                            theoceanmc1@gmail.com <br />
+                            +233 53 940 5460 | +233 54 762 6334
                         </p>
                     </div>
                 </div>
