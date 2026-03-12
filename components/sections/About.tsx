@@ -45,7 +45,7 @@ const About = () => {
                         >
                             <div className="relative w-full h-full overflow-hidden">
                                 <Image
-                                    src="/images/6.jpg"
+                                    src="/images/1.jpg"
                                     alt="MC Daniel Oceans"
                                     fill
                                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-[2000ms] scale-110 group-hover:scale-100"
