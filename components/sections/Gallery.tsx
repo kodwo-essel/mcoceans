@@ -4,12 +4,21 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const galleryImages = [
-    { src: "/images/1.jpg", title: "Royal Wedding", location: "Accra", category: "Elite" },
-    { src: "/images/2.jpg", title: "Presidential Gala", location: "Kumasi", category: "Corporate" },
-    { src: "/images/3.jpg", title: "Sporting Excellence", location: "Takoradi", category: "Sports" },
-    { src: "/images/4.jpg", title: "Private Soirée", location: "Koforidua", category: "Elite" },
-    { src: "/images/5.jpg", title: "Ambassador's Ball", location: "Sunyani", category: "Corporate" },
-    { src: "/images/6.jpg", title: "Tech Summit", location: "Ho", category: "Corporate" },
+    { src: "/images/mrandmrsofori.jpg", title: "Wedding Reception", location: "Accra", category: "Elite" },
+    { src: "/images/mrandmrsamofa.jpg", title: "Dinner and Awards", location: "Kumasi", category: "Corporate" },
+    { src: "/images/kobinaandesi.jpg", title: "Okyeame Services", location: "Takoradi", category: "Traditional" },
+    { src: "/images/stephenandgabriella.jpg", title: "Social Events", location: "Koforidua", category: "Elite" },
+    { src: "/images/joshuaandeunice.jpg", title: "Corporate Events", location: "Sunyani", category: "Corporate" },
+    { src: "/images/prosperandnanayaa.jpg", title: "Product Launch", location: "Ho", category: "Product" },
+    { src: "/images/1.jpg", title: "Okyeame Services", location: "Cape Coast", category: "Traditional" },
+    { src: "/images/2.jpg", title: "Wedding Reception", location: "Aburi", category: "Elite" },
+    { src: "/images/3.jpg", title: "Dinner and Awards", location: "Accra", category: "Corporate" },
+    { src: "/images/4.jpg", title: "Corporate Events", location: "Tema", category: "Corporate" },
+    { src: "/images/5.jpg", title: "Social Events", location: "Kumasi", category: "Elite" },
+    { src: "/images/6.jpg", title: "Product Launch", location: "Accra", category: "Product" },
+    { src: "/images/7.jpg", title: "Wedding Reception", location: "Koforidua", category: "Elite" },
+    { src: "/images/8.jpg", title: "Dinner and Awards", location: "Takoradi", category: "Corporate" },
+    { src: "/images/9.jpg", title: "Okyeame Services", location: "Ho", category: "Traditional" },
 ];
 
 const Gallery = () => {

@@ -9,25 +9,37 @@ const testimonials = [
         name: "Mr. & Mrs. Ofori",
         role: "Newlyweds",
         content: "We just want to say thank you. You handled the flow of the program so well. We appreciate how you managed last-minute changes without stress. We absolutely never regretted choosing you. You made our day so special, Daniel....",
-        image: "/images/1.jpg",
+        image: "/images/mrandmrsofori.jpg",
     },
     {
         name: "Mr. & Mrs. Amofa",
         role: "Clients",
         content: "Your presence was such a blessing. Even with the large crowd, you kept everything in order and transitioned so smoothly. Your humbleness was evident throughout, yet your stage presence was powerful. You were truly marvelous, and we appreciate you!",
-        image: "/images/2.jpg",
+        image: "/images/mrandmrsamofa.jpg",
     },
     {
         name: "Kobina & Esi",
         role: "Clients",
         content: "You brought so much life to the party! What stood out the most was your professionalism and the way you made everyone feel included. Your style is warm, engaging, and respectful. I'll never forget this day—and I'll never regret choosing you, Sir.",
-        image: "/images/3.jpg",
+        image: "/images/kobinaandesi.jpg",
     },
     {
         name: "Stephen & Gabriella",
         role: "Clients",
         content: "From start to finish, your professionalism was unmatched. You carried the entire program with such grace and energy, keeping our guests entertained and everything flowing smoothly. We made really beautiful memories. You were simply marvelous. Thanks a lot.",
-        image: "/images/4.jpg",
+        image: "/images/stephenandgabriella.jpg",
+    },
+    {
+        name: "Joshua & Eunice",
+        role: "Clients",
+        content: "Thank you so much. Thanks once again for an excellent work done for the two days",
+        image: "/images/joshuaandeunice.jpg",
+    },
+    {
+        name: "Prosper & Nana Yaa",
+        role: "Clients",
+        content: "Good morning, Sir Okyeame Nana Ofori. I am grateful for the selfless support and your quality time spent to grace our son's marriage ceremony. Our families very much appreciate your devotion and addition of colour to beautify the occasion. God bless you. Warm regards.",
+        image: "/images/prosperandnanayaa.jpg",
     },
 ];
 

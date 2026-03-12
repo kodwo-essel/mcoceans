@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -48,7 +49,15 @@ const Navbar = () => {
             >
                 <div className="container mx-auto px-6 flex justify-between items-center">
                     {/* Logo */}
-                    <Link href="/" className="group">
+                    <Link href="/" className="group flex items-center gap-4">
+                        <div className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden rounded-full border border-gold/20 group-hover:border-gold transition-colors duration-500">
+                            <Image
+                                src="/images/logo.jpg"
+                                alt="Logo"
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
                         <span className={`text-xl md:text-2xl font-black tracking-tighter transition-colors duration-500 text-white`}>
                             MC DANIEL <span className="text-gold-leaf">OCEANS.</span>
                         </span>

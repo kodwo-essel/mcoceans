@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Twitter, Facebook, MessageCircle } from "lucide-react";
 
 export default function Footer() {
@@ -13,7 +14,15 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
                     {/* Brand Col */}
                     <div className="lg:col-span-12 mb-16">
-                        <Link href="/" className="inline-block mb-12">
+                        <Link href="/" className="inline-flex items-center gap-6 mb-12 group">
+                            <div className="relative w-16 h-16 md:w-20 md:h-20 overflow-hidden rounded-full border border-white/10 group-hover:border-gold transition-colors duration-500">
+                                <Image
+                                    src="/images/logo.jpg"
+                                    alt="Logo"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
                             <span className="text-4xl md:text-6xl font-black tracking-tighter text-white">
                                 MC DANIEL <span className="text-gold-leaf">OCEANS.</span>
                             </span>
