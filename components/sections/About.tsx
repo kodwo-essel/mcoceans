@@ -46,9 +46,9 @@ const About = () => {
                             <div className="relative w-full h-full overflow-hidden">
                                 <Image
                                     src="/images/1.jpg"
-                                    alt="MC Daniel Oceans"
+                                    alt="MC Daniel Ocean"
                                     fill
-                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-[2000ms] scale-110 group-hover:scale-100"
+                                    className="object-cover transition-all duration-[2000ms] scale-110 group-hover:scale-100"
                                 />
                             </div>
                             {/* Gold Frame Corner Detail */}
@@ -72,7 +72,7 @@ const About = () => {
                             <div className="w-12 h-[1px] bg-gold/50" />
 
                             <p className="text-white/60 text-base sm:text-lg font-light leading-relaxed tracking-wide">
-                                With over half a decade of experience and specialized training in event coordination and cultural traditions, Daniel Oceans brings a vibrant blend of energy, warmth, and seamless professionalism to every stage.
+                                With over half a decade of experience and specialized training in event coordination and cultural traditions, Daniel Ocean brings a vibrant blend of energy, warmth, and seamless professionalism to every stage.
                             </p>
 
                             <div className="space-y-6">

@@ -58,7 +58,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata = {
-  title: "MC Daniel Oceans | Elite Master of Ceremony",
+  title: "MC Daniel Ocean | Elite Master of Ceremony",
   description: "Experience world-class orchestration for corporate galas and elite weddings.",
 };
 

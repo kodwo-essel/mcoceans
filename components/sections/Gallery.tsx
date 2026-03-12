@@ -58,7 +58,7 @@ const Gallery = () => {
                                 src={image.src}
                                 alt={image.title}
                                 fill
-                                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+                                className="object-cover transition-all duration-1000 scale-105 group-hover:scale-100"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
 

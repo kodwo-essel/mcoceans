@@ -110,7 +110,7 @@ const Booking = () => {
                                             required
                                             type="text"
                                             className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors placeholder:text-white/20"
-                                            placeholder="Daniel Oceans"
+                                            placeholder="Daniel Ocean"
                                         />
                                     </div>
                                     <div className="space-y-4">
@@ -120,7 +120,7 @@ const Booking = () => {
                                             required
                                             type="email"
                                             className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors placeholder:text-white/20"
-                                            placeholder="daniel@oceans.com"
+                                            placeholder="daniel@ocean.com"
                                         />
                                     </div>
                                 </div>

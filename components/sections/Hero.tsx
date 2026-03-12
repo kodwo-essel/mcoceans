@@ -17,16 +17,19 @@ const Hero = () => {
                 className="absolute inset-0 z-0 bg-emerald-deep"
             >
                 <Image
-                    src="/images/hero.jpg"
-                    alt="MC Daniel Oceans"
+                    src="/images/9.jpg"
+                    alt="MC Daniel Ocean"
                     fill
                     priority
-                    className="object-cover object-center opacity-30 grayscale mix-blend-luminosity"
+                    className="object-cover object-center opacity-50 mix-blend-luminosity"
                 />
+
+                {/* Top Shadow for Navbar Clarity */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/100 via-transparent to-transparent opacity-80" />
 
                 {/* Oceanic Green Accents */}
                 <div className="absolute inset-0 bg-emerald/10 mix-blend-color" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-forest/40 to-black/60 opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-forest/40 to-black/60 opacity-70" />
 
                 {/* Luxury Bloom Accent */}
                 <div className="bloom w-[1000px] h-[1000px] bg-emerald/20 -top-1/2 -left-1/4 opacity-40" />

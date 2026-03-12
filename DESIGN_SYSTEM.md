@@ -1,6 +1,6 @@
-# MC Daniel Oceans Design System
+# MC Daniel Ocean Design System
 
-This document outlines the visual and interactive design system for the **MC Daniel Oceans** website.
+This document outlines the visual and interactive design system for the **MC Daniel Ocean** website.
 
 ---
 

@@ -1,7 +1,7 @@
 import Gallery from "@/components/sections/Gallery";
 
 export const metadata = {
-    title: "The Gallery | Archive of MC Daniel Oceans",
+    title: "The Gallery | Archive of MC Daniel Ocean",
     description: "A curated collection of legacy events orchestrated across twelve nations.",
 };
 

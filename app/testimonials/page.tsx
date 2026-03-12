@@ -1,7 +1,7 @@
 import Testimonials from "@/components/sections/Testimonials";
 
 export const metadata = {
-    title: "Testimonials | MC Daniel Oceans",
+    title: "Testimonials | MC Daniel Ocean",
     description: "What our elite clients say about our ceremonial orchestration services.",
 };
 
