@@ -102,21 +102,43 @@ const Booking = () => {
                                     <div className="space-y-4">
                                         <label className="text-gold font-sans font-bold text-[10px] tracking-[0.3em] uppercase">Full Name</label>
                                         <input
-                                            name="user_name"
+                                            name="from_name"
                                             required
                                             type="text"
-                                            className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors"
-                                            placeholder="Alexander Sterling"
+                                            className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors placeholder:text-white/20"
+                                            placeholder="Daniel Oceans"
                                         />
                                     </div>
                                     <div className="space-y-4">
                                         <label className="text-gold font-sans font-bold text-[10px] tracking-[0.3em] uppercase">Email Address</label>
                                         <input
-                                            name="user_email"
+                                            name="reply_to"
                                             required
                                             type="email"
-                                            className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors"
-                                            placeholder="sterling@example.com"
+                                            className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors placeholder:text-white/20"
+                                            placeholder="daniel@oceans.com"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                                    <div className="space-y-4">
+                                        <label className="text-gold font-sans font-bold text-[10px] tracking-[0.3em] uppercase">Phone Number</label>
+                                        <input
+                                            name="phone"
+                                            required
+                                            type="tel"
+                                            className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors placeholder:text-white/20"
+                                            placeholder="+233 53 940 5460"
+                                        />
+                                    </div>
+                                    <div className="space-y-4">
+                                        <label className="text-gold font-sans font-bold text-[10px] tracking-[0.3em] uppercase">Event Date</label>
+                                        <input
+                                            name="event_date"
+                                            required
+                                            type="date"
+                                            className="w-full bg-transparent border-b border-white/10 py-4 text-white/20 font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors appearance-none"
                                         />
                                     </div>
                                 </div>
@@ -143,7 +165,7 @@ const Booking = () => {
                                         name="message"
                                         required
                                         rows={4}
-                                        className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors resize-none"
+                                        className="w-full bg-transparent border-b border-white/10 py-4 text-white font-sans font-bold text-base md:text-lg focus:border-gold outline-none transition-colors resize-none placeholder:text-white/20"
                                         placeholder="Tell us about your masterpiece..."
                                     ></textarea>
                                 </div>
