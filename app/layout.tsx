@@ -58,8 +58,8 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata = {
-  title: "MC Daniel Ocean | Elite Master of Ceremony",
-  description: "Experience world-class orchestration for corporate galas and elite weddings.",
+  title: "MC Daniel Ocean | Elite Master of Ceremony – Ghana",
+  description: "Experience world-class orchestration for corporate galas and elite weddings. The premier MC for luxury events across Ghana and beyond.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

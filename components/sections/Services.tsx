@@ -110,7 +110,15 @@ const Services = () => {
                                 <p className="text-white/60 text-base font-light leading-relaxed max-w-sm mx-auto mb-10">
                                     {service.description}
                                 </p>
-                                <div className="w-8 h-[1px] bg-gold mx-auto group-hover:w-24 transition-all duration-500" />
+                                <div className="mt-8">
+                                    <Link
+                                        href="/booking"
+                                        className="inline-flex items-center gap-4 px-8 py-4 border border-gold/30 text-gold font-sans font-bold text-[9px] tracking-[0.4em] uppercase hover:bg-gold hover:text-black transition-all duration-500 group/cta"
+                                    >
+                                        Inquire <ArrowRight size={12} className="group-hover/cta:translate-x-1 transition-transform" />
+                                    </Link>
+                                </div>
+                                <div className="w-8 h-[1px] bg-gold mx-auto mt-12 group-hover:w-24 transition-all duration-500" />
                             </div>
                         </motion.div>
                     ))}

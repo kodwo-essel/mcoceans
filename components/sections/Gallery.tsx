@@ -39,7 +39,7 @@ const Gallery = () => {
                         transition={{ duration: 1.2 }}
                         className="text-4xl sm:text-6xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter"
                     >
-                        Ceremonial <br />
+                        Portfolio <br />
                         <span className="text-gold-leaf">Catalog.</span>
                     </motion.h1>
                 </div>

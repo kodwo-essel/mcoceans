@@ -29,7 +29,7 @@ const Portfolio = () => {
                             className="text-4xl sm:text-6xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter"
                         >
                             The Ceremonial <br />
-                            <span className="text-gold-leaf ">Gallery.</span>
+                            <span className="text-gold-leaf ">Portfolio.</span>
                         </motion.h2>
                     </div>
                     <motion.div
@@ -45,36 +45,53 @@ const Portfolio = () => {
                     </motion.div>
                 </div>
 
-                {/* Master Collage */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.98 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
-                    className="relative aspect-[16/9] w-full border border-gold/10 overflow-hidden group"
-                >
-                    <Image
-                        src="/images/3.jpg"
-                        alt="Event Portfolio Collage"
-                        fill
-                        className="object-cover scale-110 group-hover:scale-100 transition-transform duration-[8000ms] ease-out opacity-40 group-hover:opacity-100"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent pointer-events-none" />
+                {/* Portfolio Display Grid - Updated from single image to grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {[
+                        { src: "/images/3.jpg", title: "Corporate Gala", loc: "Accra" },
+                        { src: "/images/mrandmrsofori.jpg", title: "Wedding", loc: "Ho" },
+                        { src: "/images/1.jpg", title: "Traditional", loc: "Cape Coast" },
+                        { src: "/images/6.jpg", title: "Elite Wedding", loc: "Accra" },
+                        { src: "/images/2.jpg", title: "Social Event", loc: "Aburi" },
+                        { src: "/images/mrandmrsamofa.jpg", title: "Wedding Ceremony", loc: "Kumasi" }
+                    ].map((item, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1, delay: i * 0.1 }}
+                            className="group relative aspect-[4/5] overflow-hidden border border-white/5"
+                        >
+                            <Image
+                                src={item.src}
+                                alt={item.title}
+                                fill
+                                className="object-cover transition-all duration-[1500ms] scale-105 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
 
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-                        <Link href="/portfolio">
-                            <button className="px-24 py-8 bg-gold/90 backdrop-blur-md text-black font-sans font-bold text-xs tracking-[0.5em] uppercase cursor-pointer transition-all duration-500 hover:bg-gold">
-                                View All Works
-                            </button>
-                        </Link>
-                    </div>
-                </motion.div>
+                            <div className="absolute bottom-0 left-0 p-8 w-full translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 className="text-white font-display text-2xl mb-1">{item.title}</h3>
+                                <p className="text-white/40 font-sans font-bold text-[9px] tracking-widest uppercase">{item.loc}</p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+
+                <div className="mt-20 flex justify-center">
+                    <Link href="/portfolio">
+                        <button className="px-16 py-6 border border-gold/30 text-gold font-sans font-bold text-[10px] tracking-[0.5em] uppercase cursor-pointer transition-all duration-500 hover:bg-gold hover:text-black">
+                            View All Portfolio
+                        </button>
+                    </Link>
+                </div>
 
                 {/* Elite Metrics */}
                 <div className="mt-32 grid grid-cols-2 lg:grid-cols-4 gap-24 border-t border-white/5 pt-32 text-center lg:text-left">
                     {[
-                        { label: "Elite Marriages", val: "60+" },
-                        { label: "Major Cities", val: "5+" },
+                        { label: "Elite Marriages", val: "70+" },
+                        { label: "Major Cities", val: "12+" },
                         { label: "Corporate Galas", val: "30+" },
                         { label: "Mastery", val: "5+ Yrs" }
                     ].map((stat, i) => (

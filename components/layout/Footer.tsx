@@ -61,17 +61,22 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div className="lg:col-span-4 space-y-8">
+                    <div className="lg:col-span-4 space-y-10">
                         <h4 className="text-gold font-sans font-bold text-[10px] tracking-[0.4em] uppercase">Connect</h4>
-                        <div className="flex gap-6">
+                        <div className="space-y-6">
                             {[
-                                { Icon: Instagram, href: "https://www.instagram.com/theoceanmc?utm_source=qr&igsh=MXNqcGw0aXFhYW9zZA==" },
-                                { Icon: TikTokIcon, href: "https://www.tiktok.com/@theoceanmc?_r=1&_t=ZS-94dGkHEpPXA" },
-                                { Icon: Facebook, href: "https://www.facebook.com/share/1BEtaM2Smy/" },
-                                { Icon: WhatsAppIcon, href: "https://wa.me/message/DMJTQ45QFRG6D1" }
+                                { Icon: Instagram, href: "https://www.instagram.com/theoceanmc?utm_source=qr&igsh=MXNqcGw0aXFhYW9zZA==", handle: "@theoceanmc" },
+                                { Icon: TikTokIcon, href: "https://www.tiktok.com/@theoceanmc?_r=1&_t=ZS-94dGkHEpPXA", handle: "@theoceanmc" },
+                                { Icon: Facebook, href: "https://www.facebook.com/share/1BEtaM2Smy/", handle: "MC Daniel Ocean" },
+                                { Icon: WhatsAppIcon, href: "https://wa.me/message/DMJTQ45QFRG6D1", handle: "+233 53 940 5460" }
                             ].map((social, i) => (
-                                <Link key={i} href={social.href} target="_blank" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:border-gold hover:text-gold transition-all duration-300">
-                                    <social.Icon size={20} />
+                                <Link key={i} href={social.href} target="_blank" className="flex items-center gap-5 group">
+                                    <div className="text-white/20 group-hover:text-gold transition-all duration-300">
+                                        <social.Icon size={18} />
+                                    </div>
+                                    <span className="text-white/40 group-hover:text-white font-sans font-bold text-[10px] tracking-[0.15em] uppercase transition-colors">
+                                        {social.handle}
+                                    </span>
                                 </Link>
                             ))}
                         </div>
