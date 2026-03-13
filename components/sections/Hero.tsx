@@ -107,7 +107,7 @@ const Hero = () => {
 
                         <Link href="/portfolio">
                             <button className="group relative py-2 text-white/50 font-sans font-bold text-[11px] tracking-[0.5em] uppercase overflow-hidden transition-all duration-500 hover:text-white">
-                                <span className="relative z-10">View Gallery</span>
+                                <span className="relative z-10">View Portfolio</span>
                                 <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/40 group-hover:w-full transition-all duration-500" />
                             </button>
                         </Link>
